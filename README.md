@@ -1,4 +1,6 @@
 ## Biography
+
+<img style="float: right;" src="profile_pic.JPG" alt="profile_pic" width="200"/>
  I am currently wrapping up my Phd in computer science at the University of Antwerp. I have been using *mean field methods* to analyze *load balancing policies* in systems with many servers. 
 My Phd mainly required a lot of *probability theory* (in particular Markov chain theory), *calculus* and *algorithmic programming*.
 Before starting my Phd I graduated *summa cum laude* in mathematics at the University of Antwerp.
@@ -8,7 +10,6 @@ In particular I have been accepted for the [Sigmetrics Conference](https://en.wi
 
 >It is also the name of an annual 'flagship' conference, organized by SIGMETRICS since 1973, which is considered to be the leading conference in performance analysis and modeling in the world. Known to have an extremely low acceptance rate (~15%), many of the landmark works in the area have been published through it.
 
-<img style="float: right;" src="profile_pic.JPG" alt="profile_pic" width="200"/>
 
 ## Interests
 
