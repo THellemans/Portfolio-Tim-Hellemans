@@ -6,7 +6,7 @@ My Phd mainly required a lot of *probability theory* (in particular Markov chain
 Before starting my Phd I graduated *summa cum laude* in mathematics at the University of Antwerp.
 During my Phd I have come into contact with quite a few optimization and forecasting problems. I am currently on the lookout to start working as a *data scientist*.
 I published 8 independent papers (6 as first author) which can be viewed on my [Google Scholar](https://scholar.google.com/citations?user=mrMXW1EAAAAJ&hl=en&oi=sra).
-In particular I have been accepted for the [Sigmetrics Conference](https://en.wikipedia.org/wiki/SIGMETRICS#2020) twice, this is significant as the Sigmetrics conference may be seen as the flagship conference for my area of research. Also, from Wikipedia: 
+In particular I have been accepted for the [Sigmetrics Conference](https://en.wikipedia.org/wiki/SIGMETRICS#2020) twice, this is significant as the Sigmetrics conference may be seen as the flagship conference for my area of research. From Wikipedia: 
 
 >It is also the name of an annual 'flagship' conference, organized by SIGMETRICS since 1973, which is considered to be the leading conference in performance analysis and modeling in the world. Known to have an extremely low acceptance rate (~15%), many of the landmark works in the area have been published through it.
 
