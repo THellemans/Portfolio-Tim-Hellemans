@@ -1,7 +1,6 @@
 ## Biography
 
-<img style="float: right;" src="profile_pic.JPG" alt="profile_pic" width="200"/>
-I am currently wrapping up my Phd in computer science at the University of Antwerp. I have been using *mean field methods* to analyze *load balancing policies* in systems with many servers. 
+<img style="float: right;" src="profile_pic.JPG" alt="profile_pic" width="200"/> I am currently wrapping up my Phd in computer science at the University of Antwerp. I have been using *mean field methods* to analyze *load balancing policies* in systems with many servers. 
 My Phd mainly required a lot of *probability theory* (in particular Markov chain theory), *calculus* and *algorithmic programming*.
 Before starting my Phd I graduated *summa cum laude* in mathematics at the University of Antwerp.
 During my Phd I have come into contact with quite a few optimization and forecasting problems. I am currently on the lookout to start working as a *data scientist*.
