@@ -1,6 +1,6 @@
 ## Portfolio : Tim Hellemans
 
-### [Thesis, on the power of d choices]{https://github.com/THellemans/Thesis-Power-of-d-Choices}
+### [Thesis, on the power of d choices](https://github.com/THellemans/Thesis-Power-of-d-Choices)
 
 Markov processes have found widespread use in the analysis of computer systems and beyond. Over time the size of the systems under consideration has grown considerably, e.g. Google has hundreds
 of thousands of servers located in its various data centers. This growth in the system size has made
