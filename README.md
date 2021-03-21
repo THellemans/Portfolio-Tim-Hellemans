@@ -26,7 +26,7 @@ In particular I have been accepted for the [Sigmetrics Conference](https://en.wi
 
 ## [Thesis, on the power of d choices](https://github.com/THellemans/Thesis-Power-of-d-Choices)
 
-![image](figure_expected_workload.PNG)
+![image](figure_expected_workload-removebg.PNG)
 
 Markov processes have found widespread use in the analysis of computer systems and beyond. Over time the size of the systems under consideration has grown considerably, e.g. Google has hundreds
 of thousands of servers located in its various data centers. This growth in the system size has made
