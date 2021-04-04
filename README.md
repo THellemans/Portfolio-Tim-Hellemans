@@ -24,7 +24,7 @@ In particular I have been accepted for the [Sigmetrics Conference](https://en.wi
 
 ## Education
 
-## [Thesis, on the power of d choices](https://github.com/THellemans/Thesis-Power-of-d-Choices)
+## [Thesis, Analysis of Large Scale Randomized Load Balancing Policies](https://github.com/THellemans/Thesis-Analysis-of-Large-Scale-Randomized-Load-Balancing-Policies)
 
 ![image](figure_expected_workload-removebg.png)
 
