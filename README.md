@@ -20,7 +20,9 @@ In particular I have been accepted for the [Sigmetrics Conference](https://en.wi
  5. Matlab
  6. (Discrete) optimization
  7. Data Science
- 8. Scheduling problems
+ 8. Machine Learning
+ 9. Scheduling problems
+ 10. Routing problems
 
 ## Education
 
