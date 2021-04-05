@@ -56,16 +56,26 @@ The image we started with may be seen as an example of a problem setting we anal
 
 At each arrival instant, the car considers *2* queues and decides which queue it will join based on the provided information. We developped a general method which may be used to analyse load balancing policies which distribute jobs in this context. We found that making use of the age of a job may result in a reduction in waiting time of up to *80%* for jobs which are sufficiently variable (we used a squared coefficient of variation of 10).
 
-## [Vehicle Routing Problem]{https://github.com/THellemans/vehicle_routing_problem}
+## [Discrete Optimization: Vehicle Routing Problem](https://github.com/THellemans/vehicle_routing_problem)
 
 # Motivation
 
-Discrete optimization is everywhere! The Vehicle Routing Problem (VRP) is a well known optimization problem which (attempts) to answer the question:
+Want to create a work schedule? Do you need to supply your customers with product? Need to fill a truck with as many products as possible? Want to create a schedule for your airline? All these problems are discrete optimization problems. These problems are still solved by hand at many companies, however there exist efficient mathematical algorithms which solve these problems to optimality. This way companies can reduce their costs in 2 ways:
+ - Better (optimal) solutions to their problem and
+ - employees no longer need to spend their time solving these problems by hand.
+
+The Vehicle Routing Problem (VRP) is a well known optimization problem which (attempts) to answer the question:
 
 > What is the optimal set of routes for a fleet of vehicles to traverse in order to deliver to a given set of customers?
 
-Variations of this question are interesting in many practical applications.
+Variations of this question are interesting in many practical applications such as supplying customers with products and creating a flight schedule.
 
-# Running the code
+We found that an Adaptive Large Neighborhood Search works especially well for this optimization problem.
 
-In order to test the code, run `python solver_ALNS.py ./data/vrp_5_4_1` or any other file in the data folder.
+# Formulation of the problem
+
+We are given the geographical location of a warehouse (say <img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+
+# Why Adaptive Large Neighborhood Search?
+
+
