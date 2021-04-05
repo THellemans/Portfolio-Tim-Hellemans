@@ -58,7 +58,7 @@ At each arrival instant, the car considers *2* queues and decides which queue it
 
 ## [Discrete Optimization: Vehicle Routing Problem](https://github.com/THellemans/vehicle_routing_problem)
 
-# Motivation
+### Motivation
 
 Want to create a work schedule? Do you need to supply your customers with product? Need to fill a truck with as many products as possible? Want to create a schedule for your airline? All these problems are discrete optimization problems. These problems are still solved by hand at many companies, however there exist efficient mathematical algorithms which solve these problems to optimality. This way companies can reduce their costs in 2 ways:
  - Better (optimal) solutions to their problem and
@@ -72,10 +72,19 @@ Variations of this question are interesting in many practical applications such 
 
 We found that an Adaptive Large Neighborhood Search works especially well for this optimization problem.
 
-# Formulation of the problem
+### Formulation of the problem
 
-We are given the geographical location of a warehouse (say <img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+We are given the geographical location of a warehouse (say `(x_0, y_0)`) and the location of `n` customers (say `(x_i, y_i)` for `i=1,...,n`). We have `m` trucks available at the warehouse and need to ship out goods to each of the customers by sending out trucks from these warehouses. Furthermore all these trucks need to return to the warehouse after supplying all customers on their path. Our task is now to send out these trucks such that we visit each customer exactly once while minimizing the total distance travelled. As such this problem can be seen as a generalization of the well known [travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem).
 
-# Why Adaptive Large Neighborhood Search?
+### Why Adaptive Large Neighborhood Search?
 
+#### Is this a discrete optimization problem?
+
+Maybe we should first ask the question, why is this a *discrete* optimization problem? In order to solve this problem, we have to decide for every path (that is, every connection between two customers or the warehouse and a customer) if we want to send a truck along that road. This is a `discrete choice`, that is: we either send the truck or we don't, we can't send half a truck along a path. The value of our decision variables is either `0` (that is, we don't send the truck) or `1` (that is, we do send the truck). Therefore this problem is a discrete optimization problem.
+
+#### Integer Programming solution
+
+One approach which should be considered for all discrete optimization problems is to formulate the problem as an [Integer Programming Problem](https://en.wikipedia.org/wiki/Integer_programming). That is, we need to define decision variables, constraints and an objective function.
+
+As decision variables we could define <img src="https://render.githubusercontent.com/render/math?math=p_{k,i,j}"> to denote whether or not truck k travels from customer i to customer j.  
 
