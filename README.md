@@ -55,3 +55,17 @@ The image we started with may be seen as an example of a problem setting we anal
  - The amount of service received by the job at the head of the queue.
 
 At each arrival instant, the car considers *2* queues and decides which queue it will join based on the provided information. We developped a general method which may be used to analyse load balancing policies which distribute jobs in this context. We found that making use of the age of a job may result in a reduction in waiting time of up to *80%* for jobs which are sufficiently variable (we used a squared coefficient of variation of 10).
+
+## [Vehicle Routing Problem]{https://github.com/THellemans/vehicle_routing_problem}
+
+# Motivation
+
+Discrete optimization is everywhere! The Vehicle Routing Problem (VRP) is a well known optimization problem which (attempts) to answer the question:
+
+> What is the optimal set of routes for a fleet of vehicles to traverse in order to deliver to a given set of customers?
+
+Variations of this question are interesting in many practical applications.
+
+# Running the code
+
+In order to test the code, run `python solver_ALNS.py ./data/vrp_5_4_1` or any other file in the data folder.
