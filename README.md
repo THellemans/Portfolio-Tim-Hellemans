@@ -126,10 +126,10 @@ This approach has several advantages:
  - When the program finishes you are certain that it has converged to the optimal solution.
 
  While this looks promising, this method only works for small to medium size vehicle routing. The first issue is the fact that we have exponentially many subsets `S` for which we need to make sure there is no subtour. However, these subtour constraints may be added iteratively:
-  1 Solve the problem without the subtour constraints
-  2 If there are no subtours (which do not pass by the factory) in the solution, you have found the optimal solution! Otherwise, go to step 3.
-  3 Add constraints associated to the subtours present in the optimal solution to the integer programming problem.
-  4 Solve the integer programming problem and return to step 2.
+  1. Solve the problem without the subtour constraints
+  2. If there are no subtours (which do not pass by the factory) in the solution, you have found the optimal solution! Otherwise, go to step 3.
+  3. Add constraints associated to the subtours present in the optimal solution to the integer programming problem.
+  4. Solve the integer programming problem and return to step 2.
 
  To further speed up the optimizer, you can hot start the VRP by using a greedy algorithm to obtain an initial solution.
 
@@ -179,8 +179,10 @@ We start by generating an initial solution using the above described method. We 
 
 We can now start our iterative procedure. It consists of the following steps:
 
- > while time < time_limit
- > 	 	select a destroy method according to prob_destroy
- > 	 	select a repair method according to prob_repair
- > 	 	Execute the destroy and repair methods
- > 	 	if
+```
+ while time < time_limit
+  	 	select a destroy method according to prob_destroy
+  	 	select a repair method according to prob_repair
+  	 	Execute the destroy and repair methods
+  	 	if
+```
