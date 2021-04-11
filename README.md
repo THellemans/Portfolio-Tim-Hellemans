@@ -108,13 +108,13 @@ Each customer should be visited exactly once, therefore one of the incoming edge
 of course all these vehicles should again leave the customers they visit, this translates into the constraint:
 <img src="https://render.githubusercontent.com/render/math?math=\forall j \neq 0: \sum_{j} p_{i,j} = 1">.
 
-For the factory, there can be at most `m` vehicles which leave the factory:
-<img src="https://render.githubusercontent.com/render/math?math= \sum_{j} p_{0,j} \leq m">
-and every vehicle that leaves the factory must return to the factory:
-<img src="https://render.githubusercontent.com/render/math?math= \sum_{i} p_{i,0} = \sum_{j} p_{0,j}">.
+For the warehouse, there can be at most `m` vehicles which leave the warehouse:
+<img src="https://render.githubusercontent.com/render/math?math=\sum_{j} p_{0,j} \leq m">
+and every vehicle that leaves the warehouse must return to the warehouse:
+<img src="https://render.githubusercontent.com/render/math?math=\sum_{i} p_{i,0} = \sum_{j} p_{0,j}">.
 
-Using all these constraints, one issue remains: there might be subtours which do not pass by the factor in a solution. In fact, we may even have that all customers are connected except for the factory!
-A subtour is a circular path, the solution should exist of at most `m` subtours which all pass by the factory. Therefore, we require that for every set `S` of customers, there must be at least one vehicle leaving the set `S`. This entails that the following inequalities must hold:
+Using all these constraints, one issue remains: there might be subtours which do not pass by the factor in a solution. In fact, we may even have that all customers are connected except for the warehouse!
+A subtour is a circular path, the solution should exist of at most `m` subtours which all pass by the warehouse. Therefore, we require that for every set `S` of customers, there must be at least one vehicle leaving the set `S`. This entails that the following inequalities must hold:
 
 <img src="https://render.githubusercontent.com/render/math?math= \forall S \neq \varempty, 0 \notin S: \sum_{i \in S} \sum_{j \notin S}  p_{i,j} \geq 1">.
 
@@ -126,10 +126,10 @@ This approach has several advantages:
  - When the program finishes you are certain that it has converged to the optimal solution.
 
  While this looks promising, this method only works for small to medium size vehicle routing. The first issue is the fact that we have exponentially many subsets `S` for which we need to make sure there is no subtour. However, these subtour constraints may be added iteratively:
-  1. Solve the problem without the subtour constraints
-  2. If there are no subtours (which do not pass by the factory) in the solution, you have found the optimal solution! Otherwise, go to step 3.
-  3. Add constraints associated to the subtours present in the optimal solution to the integer programming problem.
-  4. Solve the integer programming problem and return to step 2.
+  1 Solve the problem without the subtour constraints
+  2 If there are no subtours (which do not pass by the warehouse) in the solution, you have found the optimal solution! Otherwise, go to step 3.
+  3 Add constraints associated to the subtours present in the optimal solution to the integer programming problem.
+  4 Solve the integer programming problem and return to step 2.
 
  To further speed up the optimizer, you can hot start the VRP by using a greedy algorithm to obtain an initial solution.
 
@@ -142,7 +142,7 @@ However, this does increase the number of variables which slows down the optimiz
 
  While this method is guaranteed to work, it becomes too slow to solve large scale VRPs. Therefore, we have implemented an *Adaptive Large Neighborhood Search* algorithm to quickly solve the VRP. 
 
- Another alley which is worth investigating is to use [Column Generation](https://arxiv.org/ftp/arxiv/papers/1806/1806.00831.pdf) to obtain the optimal solution. This method exists in associating a variable to each legal tour (that is each tour which passes by the factory) and reformulating the aforementioned constraints using these variables. One then solves that problem as an ordinary LP problem and iteratively adds integrality constraints (that, is a tour variable must be equal to 0 or 1) to obtain a legal solution.
+ Another alley which is worth investigating is to use [Column Generation](https://arxiv.org/ftp/arxiv/papers/1806/1806.00831.pdf) to obtain the optimal solution. This method exists in associating a variable to each legal tour (that is each tour which passes by the warehouse) and reformulating the aforementioned constraints using these variables. One then solves that problem as an ordinary LP problem and iteratively adds integrality constraints (that, is a tour variable must be equal to 0 or 1) to obtain a legal solution.
 
 ### The Adaptive Large Neighborhood Search algorithm
 
@@ -180,9 +180,22 @@ We start by generating an initial solution using the above described method. We 
 We can now start our iterative procedure. It consists of the following steps:
 
 ```
- while time < time_limit
-  	 	select a destroy method according to prob_destroy
-  	 	select a repair method according to prob_repair
-  	 	Execute the destroy and repair methods
-  	 	if
+temperature=100
+current_solution = best_solution = generate_initial_solution()
+current_objective = best_objective = objetive from initial solution
+while time < time_limit:
+	select a destroy method according to prob_destroy
+	select a repair method according to prob_repair
+	Execute the destroy and repair methods yielding a new_solution and new_objective
+	if new_objective < best_objective:
+		best_objective = current_objective = new_objective
+		best_solution = current_solution = new_solution
+		Increase the probability of picking this destroy and repair method
+	elif uniform(0,1) < exp((new_objective - current_objective) / temperature):
+		current_objective = new_objective
+		current_solution = new_solution
+		Increase the probability of picking this destroy and repair method
+	else
+		Decrease the probability of picking this destroy and repair method
+	decrease the temperature
 ```
