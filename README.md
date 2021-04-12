@@ -77,6 +77,8 @@ We found that an Adaptive Large Neighborhood Search works especially well for th
 
 We are given the geographical location of a warehouse (say `(x_0, y_0)`) and the location of `n` customers (say `(x_i, y_i)` for `i=1,...,n`). We have `m` vehicles available at the warehouse and need to ship out goods to each of the customers by sending out vehicles from this warehouse. After supplying all customers on their path these vehicles need to return to the warehouse. Furthermore, each customer has some demand `D_i` and each vehicle has a maximal capacity `C` (which is equal for all vehicles). Our task is now to send out these vehicles such that we visit each customer exactly once while minimizing the total distance travelled. As such this problem can be seen as a generalization of the well known [travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem).
 
+<img style="float: right;" src="VRP1.png" alt="profile_pic" width="200"/>
+
 ### Why Adaptive Large Neighborhood Search?
 
 #### Is this a discrete optimization problem?
