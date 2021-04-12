@@ -2,9 +2,9 @@
 
 <img style="float: right;" src="profile_pic.JPG" alt="profile_pic" width="200"/>
  I am currently wrapping up my Phd in computer science at the University of Antwerp. I have been using *mean field methods* to analyze *load balancing policies* in systems with many servers. 
-My Phd mainly required a lot of *probability theory* (in particular Markov chain theory), *calculus* and *programming*.
-Before starting my Phd I graduated *summa cum laude* in mathematics at the University of Antwerp.
-During my Phd I have come into contact with quite a few optimization and forecasting problems. I am currently on the lookout to start working as a *data scientist*.
+My Phd mainly required a lot of **probability theory** (in particular Markov chain theory), **calculus** and **programming**.
+Before starting my Phd I graduated **summa cum laude** in mathematics at the University of Antwerp.
+During my Phd I have come into contact with quite a few optimization and forecasting problems. I am currently on the lookout to start working as a **data scientist**.
 I published 8 independent papers (6 as first author) which can be viewed on my [Google Scholar](https://scholar.google.com/citations?user=mrMXW1EAAAAJ&hl=en&oi=sra).
 In particular I have been accepted for the [Sigmetrics Conference](https://en.wikipedia.org/wiki/SIGMETRICS#2020) three times, this is significant as the Sigmetrics conference may be seen as the flagship conference for my area of research. From Wikipedia: 
 
@@ -48,7 +48,8 @@ system becomes a set of partial differential equations (PDEs).
 
 In this thesis, we initiated the analysis of workload dependent load balancing policies. For these policies, the aforementioned PDEs can be reduced to a single integro differential equation or to ordinary differential equations. Therefore, these policies are relatively easy to study for general job sizes. We found that many existing policies fall into the category of workload dependent policies. Besides obtaining numerical methods to analyse these load balancing policies, we additionally prove many analytical results for these type of models.
 
-In addition, we recognized that studying the more *classic* queue length dependent load balancing policies for general job sizes is indeed difficult. However, if one restricts to phase type job sizes (which are dense in the set of all probability distributions) the analysis simplifies significantly. Furthermore, we introduce and analyse a set of policies which take both the queue length and the age of the job currently receiving service into account.
+In addition, we recognized that studying the more 
+classic* queue length dependent load balancing policies for general job sizes is indeed difficult. However, if one restricts to phase type job sizes (which are dense in the set of all probability distributions) the analysis simplifies significantly. Furthermore, we introduce and analyse a set of policies which take both the queue length and the age of the job currently receiving service into account.
 
 The image we started with may be seen as an example of a problem setting we analysed. There are multiple queues (here queues are represented by toll gates) at which jobs (in this case cars) arrive. For each queue we know two things: 
  - The number of cars waiting to receive service.
@@ -80,7 +81,7 @@ We are given the geographical location of a warehouse (say `(x_0, y_0)`) and the
 
 #### Is this a discrete optimization problem?
 
-Maybe we should first ask the question, why is this a *discrete* optimization problem? In order to solve this problem, we have to decide for every path (that is, every connection between two customers or the warehouse and a customer) if we want to send a vehicle along that road. This is a `discrete choice`, that is: we either send the vehicle or we don't, we can't send half a vehicle along a path. The value of our decision variables is either `0` (that is, we don't send the vehicle) or `1` (that is, we do send the vehicle). Therefore this problem is a discrete optimization problem.
+Maybe we should first ask the question, why is this a **discrete** optimization problem? In order to solve this problem, we have to decide for every path (that is, every connection between two customers or the warehouse and a customer) if we want to send a vehicle along that road. This is a `discrete choice`, that is: we either send the vehicle or we don't, we can't send half a vehicle along a path. The value of our decision variables is either `0` (that is, we don't send the vehicle) or `1` (that is, we do send the vehicle). Therefore this problem is a discrete optimization problem.
 
 #### Integer Programming solution for the ordinary vehicle routing problem
 
@@ -98,7 +99,7 @@ know which vehicle is travelling which path. Therefore, we can leave out the k i
 
 For the objective, we want to minimize the total distance travelled by all vehicles.
 This simply corresponds to minimizing:
-<center> <img src="https://render.githubusercontent.com/render/math?math=\sum_{i,j} p_{i,j} d(i,j)"> </center>,
+<center> <img src="https://render.githubusercontent.com/render/math?math=\sum_{i,j} p_{i,j} d(i,j), "> </center>
 with <img src="https://render.githubusercontent.com/render/math?math=d(i,j)"> the distance between location i and j. In this project we simply set <img src="https://render.githubusercontent.com/render/math?math=\sum_{i,j} p_{i,j} d(i,j) = \sqrt{(x_i - x_j)^2 + (y_i - y_j)^2}">.
 
 We should add restriction to these decision variables such that a solution to the integer programming problem also yields a solution for the original problem. As a first restriction, we require that our binary variables are indeed binary! That is, we require <img src="https://render.githubusercontent.com/render/math?math=p_{i,j} \in \{0,1\}">.
@@ -140,13 +141,13 @@ When we add a finite capacity `C` to each vehicle and a demand `D_i` to each cus
 
 However, this does increase the number of variables which slows down the optimizer even further.
 
- While this method is guaranteed to work, it becomes too slow to solve large scale VRPs. Therefore, we have implemented an *Adaptive Large Neighborhood Search* algorithm to quickly solve the VRP. 
+ While this method is guaranteed to work, it becomes too slow to solve large scale VRPs. Therefore, we have implemented an **Adaptive Large Neighborhood Search** algorithm to quickly solve the VRP. 
 
  Another alley which is worth investigating is to use [Column Generation](https://arxiv.org/ftp/arxiv/papers/1806/1806.00831.pdf) to obtain the optimal solution. This method exists in associating a variable to each legal tour (that is each tour which passes by the warehouse) and reformulating the aforementioned constraints using these variables. One then solves that problem as an ordinary LP problem and iteratively adds integrality constraints (that, is a tour variable must be equal to 0 or 1) to obtain a legal solution.
 
 ### The Adaptive Large Neighborhood Search algorithm
 
-The *Adaptive Large Neighborhood Search (ALNS)* algorithm is a simple destroy and repair algorithm. This means that we start by generating an initial solution and then adapt this solution by iteratively destroying parts of the solution and then repairing them. As the parts which we destroy might be substantial (sometimes we might even destroy half of the existing solution) the neighborhoods in which we look for a new (better) soluton are large. The adaptive stems from the fact that you implement multiple destroy and repair methods and the algorithm will itself detect which work best for the problem at hand, that is the algorithm adapts itself to the problem you are trying to solve. 
+The **Adaptive Large Neighborhood Search (ALNS)** algorithm is a simple destroy and repair algorithm. This means that we start by generating an initial solution and then adapt this solution by iteratively destroying parts of the solution and then repairing them. As the parts which we destroy might be substantial (sometimes we might even destroy half of the existing solution) the neighborhoods in which we look for a new (better) soluton are large. The adaptive stems from the fact that you implement multiple destroy and repair methods and the algorithm will itself detect which work best for the problem at hand, that is the algorithm adapts itself to the problem you are trying to solve. 
 
 #### Representation of solution
 
@@ -158,7 +159,7 @@ For the greedy solution, we add the customers to the schedule of a vehicle one a
 
 #### Repair methods
 
-Our greedy initial solution not only makes an initial solution, but we can also be used to *repair* an existing solution. Some variants which one may want to use include:
+Our greedy initial solution not only makes an initial solution, but we can also be used to **repair** an existing solution. Some variants which one may want to use include:
  - Add customers in a specific order (based on location or demand).
  - Favour vehicles in some way (based on the number of customers they already visit, the demand they already satisfy, ...).
 
@@ -166,7 +167,7 @@ This way we can make a set of repair methods.
 
 #### Destroy methods
 
-All we really need now is a way to *destroy* an existing solution, that is a method to remove a part from the solution such that we can repair the solution again. Examples of destroy methods are:
+All we really need now is a way to **destroy** an existing solution, that is a method to remove a part from the solution such that we can repair the solution again. Examples of destroy methods are:
  - Remove the path of a number of vehicles. These vehicles may be selected arbitrarily, according to the fraction of their total travel distance over the number of customers they serve or some other quantity.
   - Remove some of the longer paths which are being executed and some more either randomly selected paths.
   - Remove a long path and some of the paths which are close to this long path
