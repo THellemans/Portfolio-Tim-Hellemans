@@ -67,8 +67,8 @@ At each arrival instant, the car considers 2 queues and decides which queue it w
  - Tim Hellemans and Benny Van Houdt Performance of Redundancy(d) with Identical/Independent Replicas ACM ToMPECS, Vol. 4, No 2, Article No. 9, June 2019.
  - Tim Hellemans and Benny Van Houdt. "Performance analysis of load balancing policies with memory." Proceedings of the 13th EAI International Conference on Performance Evaluation Methodologies and Tools (2020).
  - Tim Hellemans and Benny Van Houdt. "Improved Load Balancing in Large Scale Systems using Attained Service Time Reporting." arXiv preprint arXiv:2011.08250 (2020).
- - Wouter Minnebo, Tim Hellemans and Benny Van HoudtOn a Class of Push and Pull Strategies with Single Migrations and Limited Probe Rate Performance Evaluation, Vol. 113, pp. 42-67, 2017.
  - Tim Hellemans, Robert N. Boute, and Benny Van Houdt. "Analysis of lead time correlation under a base-stock policy." European Journal of Operational Research 276.2 (2019): 519-535.
+ - Wouter Minnebo, Tim Hellemans and Benny Van HoudtOn a Class of Push and Pull Strategies with Single Migrations and Limited Probe Rate Performance Evaluation, Vol. 113, pp. 42-67, 2017.
  - Ben Berckmoes, Tim Hellemans, Mark Sioen, & Jan Van Casteren An application of approach theory to the relative Hausdorff measure of non-compactness for the Wasserstein metric. Journal of Mathematical Analysis and Applications (2017), 449(2), 1770-1789.
 
 ## [Discrete Optimization: Capacitated Vehicle Routing Problem](https://github.com/THellemans/vehicle_routing_problem)
