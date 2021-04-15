@@ -3,9 +3,9 @@
 <img style="float: right;" src="figures/profile_pic.JPG" alt="profile_pic" width="200"/>
  I am currently wrapping up my **Phd** in **computer science** at the University of Antwerp which I started after graduating **summa cum laude** in mathematics. I have been using **mean field methods** to analyze **load balancing policies** in systems with many servers. 
 My Phd mainly required a lot of **probability theory** (in particular Markov chain theory), **calculus** and **programming**.
-During my Phd I have come into contact with quite a few optimization and forecasting problems. I am currently on the lookout to start working as a **data scientist**.
-I published 9 independent papers (7 as first author) which can be viewed on my [Google Scholar](https://scholar.google.com/citations?user=mrMXW1EAAAAJ&hl=en&oi=sra).
-In particular I have been accepted for the [Sigmetrics Conference](https://en.wikipedia.org/wiki/SIGMETRICS#2020) three times, this is significant as the Sigmetrics conference may be seen as the flagship conference for my area of research. From Wikipedia: 
+During my Phd I have come into contact with quite a few **optimization** and **forecasting** problems. I am currently on the lookout to start working as a **data scientist**.
+I published **9** independent papers **(7 as first author)**.
+In particular I have been accepted (as first author) for the [**Sigmetrics Conference**](https://en.wikipedia.org/wiki/SIGMETRICS#2020) three times, this is significant as it is the flagship conference for my area of research. From Wikipedia: 
 
 >It is also the name of an annual 'flagship' conference, organized by SIGMETRICS since 1973, which is considered to be the leading conference in performance analysis and modeling in the world. Known to have an extremely low acceptance rate (~15%), many of the landmark works in the area have been published through it.
 
@@ -28,7 +28,7 @@ In particular I have been accepted for the [Sigmetrics Conference](https://en.wi
 
 ## [Thesis, Analysis of Large Scale Randomized Load Balancing Policies](https://github.com/THellemans/thesis)
 
-In addition to the text and code which I shared at this [github repository](https://github.com/THellemans/thesis) I also made videos which give a general overview of each chapter in my thesis, these videos can be found at this [youtube playlist](https://www.youtube.com/playlist?list=PLRcKwIHscs19xypNk9B7uMimChab8_iWE).
+In addition to the text and code which I shared at my [github repository](https://github.com/THellemans/thesis) I also made videos which give a general overview of each chapter in my thesis, these videos can be found at my [youtube playlist](https://www.youtube.com/playlist?list=PLRcKwIHscs19xypNk9B7uMimChab8_iWE).
 
 <img style="float: right;" src="figures/figure_expected_workload-removebg.png" alt="profile_pic" width="900"/>
 
