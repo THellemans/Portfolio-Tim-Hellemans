@@ -75,7 +75,7 @@ At each arrival instant, the car considers 2 queues and decides which queue it w
 
 ### Motivation
 
-Want to create a work schedule? Do you need to supply your customers with product? Need to fill a vehicle with as many products as possible? Want to create a schedule for your airline? All these problems are discrete optimization problems. They are still solved by hand at many companies, however there exist efficient mathematical algorithms which solve these problems to optimality. This way companies can reduce their costs in 2 ways:
+Want to create a work schedule? Do you need to supply your customers with products? Need to fill a vehicle with as many products as possible? Want to create a schedule for your airline? All these problems are discrete optimization problems. They are still solved by hand at many companies, however there exist efficient mathematical algorithms which solve these problems to optimality. This way companies can reduce their costs in 2 ways:
  - Better (optimal) solutions to their problem and
  - employees no longer need to spend their time solving these problems by hand.
 
@@ -89,7 +89,7 @@ We found that an Adaptive Large Neighborhood Search works especially well for th
 
 ### Formulation of the problem
 
-We are given the geographical location of a warehouse (say `(x_0, y_0)`) and the location of `n` customers (say `(x_i, y_i)` for `i=1,...,n`). We have `m` vehicles available at the warehouse and need to ship out goods to each of the customers by sending out vehicles from this warehouse. After supplying all customers on their path these vehicles need to return to the warehouse. Furthermore, each customer has some demand `D_i` and each vehicle has a maximal capacity `C` (which is equal for all vehicles). Our task is now to send out these vehicles such that we visit each customer exactly once while minimizing the total distance travelled. As such this problem can be seen as a generalization of the well known [travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem).
+We are given the geographical location of a warehouse (say `(x_0, y_0)`) and the location of `n` customers (say `(x_i, y_i)` for `i=1,...,n`). We have `m` vehicles available at the warehouse and need to ship out goods to each of the customers by sending out vehicles from this warehouse. After supplying all customers on their path these vehicles need to return to the warehouse. Furthermore, each customer has some demand `D_i` and each vehicle has a maximal capacity `C` (which is equal for all vehicles). Our task is now to send out these vehicles such that we supply each customer with their required goods while minimizing the total distance travelled. As such this problem can be seen as a generalization of the well known [travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem).
 
 ![image](figures/VRP1-removebg-preview.png)
 
