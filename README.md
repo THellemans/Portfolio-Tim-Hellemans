@@ -116,24 +116,25 @@ know which vehicle is travelling which path. Therefore, we can leave out the k i
 For the objective, we want to minimize the total distance travelled by all vehicles.
 This simply corresponds to minimizing:
 <center> <img src="https://render.githubusercontent.com/render/math?math=\sum_{i,j} p_{i,j} d(i,j), "> </center>
-with <img src="https://render.githubusercontent.com/render/math?math=d(i,j)"> the distance between location i and j. In this project we simply set <img src="https://render.githubusercontent.com/render/math?math=\sum_{i,j} p_{i,j} d(i,j) = \sqrt{(x_i - x_j)^2 + (y_i - y_j)^2}">.
+with <img src="https://render.githubusercontent.com/render/math?math=d(i,j)"> the distance between location i and j. In this project we simply set 
+<center> <img src="https://render.githubusercontent.com/render/math?math=\sum_{i,j} p_{i,j} d(i,j) = \sqrt{(x_i - x_j)^2 + (y_i - y_j)^2}">. </center>
 
 We should add restriction to these decision variables such that a solution to the integer programming problem also yields a solution for the original problem. As a first restriction, we require that our binary variables are indeed binary! That is, we require <img src="https://render.githubusercontent.com/render/math?math=p_{i,j} \in \{0,1\}">.
 
 Each customer should be visited exactly once, therefore one of the incoming edges for each customer should be visited. This translates into the constraint:
-<img src="https://render.githubusercontent.com/render/math?math=\forall j \neq 0: \sum_{i} p_{i,j} = 1">,
+<center> <img src="https://render.githubusercontent.com/render/math?math=\forall j \neq 0: \sum_{i} p_{i,j} = 1">,</center>
 of course all these vehicles should again leave the customers they visit, this translates into the constraint:
-<img src="https://render.githubusercontent.com/render/math?math=\forall j \neq 0: \sum_{j} p_{i,j} = 1">.
+<center> <img src="https://render.githubusercontent.com/render/math?math=\forall j \neq 0: \sum_{j} p_{i,j} = 1">. </center>
 
 For the warehouse, there can be at most `m` vehicles which leave the warehouse:
-<img src="https://render.githubusercontent.com/render/math?math=\sum_{j} p_{0,j} \leq m">
+<center> <img src="https://render.githubusercontent.com/render/math?math=\sum_{j} p_{0,j} \leq m"> </center>
 and every vehicle that leaves the warehouse must return to the warehouse:
-<img src="https://render.githubusercontent.com/render/math?math=\sum_{i} p_{i,0} = \sum_{j} p_{0,j}">.
+<center> <img src="https://render.githubusercontent.com/render/math?math=\sum_{i} p_{i,0} = \sum_{j} p_{0,j}">. </center>
 
 Using all these constraints, one issue remains: there might be subtours which do not pass by the factor in a solution. In fact, we may even have that all customers are connected except for the warehouse!
 A subtour is a circular path, the solution should exist of at most `m` subtours which all pass by the warehouse. Therefore, we require that for every set `S` of customers, there must be at least one vehicle leaving the set `S`. This entails that the following inequalities must hold:
 
-<img src="https://render.githubusercontent.com/render/math?math=\forall S \neq \varempty, 0 \notin S: \sum_{i \in S} \sum_{j \notin S}  p_{i,j} \geq 1">.
+<center> <img src="https://render.githubusercontent.com/render/math?math=\forall S \neq \varempty, 0 \notin S: \sum_{i \in S} \sum_{j \notin S}  p_{i,j} \geq 1">. </center>
 
 Using these variables and constraints, we can quickly implement a solution to the CVRP by making use a constraint programming framework such as [OR-Tools](https://developers.google.com/optimization/cp). Using this implementation, you can additionally solve the problem using an integer programming solver such as [Gurobi](https://www.gurobi.com/), see also [here](https://developers.google.com/optimization).
 
@@ -153,7 +154,7 @@ This approach has several advantages:
 #### Integer Programming solution for the capacitated vehicle routing problem
 
 When we add a finite capacity `C` to each vehicle and a demand `D_i` to each customer, the above described integer programming formulation no longer works and we can't simply add some constraints to assure the capacity constraints are satisfied. The most straightforward method to adapt the IPP described above is to add an index `k` to the path variables we defined earlier. That is, we define the variables <img src="https://render.githubusercontent.com/render/math?math=p_{k,i,j}"> to denote if vehicle `k` travels on the path from `i` to `j`. This way we can easily add the capacity constraint by adding the constraint:
-<img src="https://render.githubusercontent.com/render/math?math=\forall k: \sum_{i,j} D_i p_{k,i,j} \leq C">.
+<center> <img src="https://render.githubusercontent.com/render/math?math=\forall k: \sum_{i,j} D_i p_{k,i,j} \leq C">. </center>
 
 However, this does increase the number of variables which slows down the optimizer even further.
 
