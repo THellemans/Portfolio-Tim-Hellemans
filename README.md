@@ -26,9 +26,9 @@ In particular I have been accepted for the [Sigmetrics Conference](https://en.wi
 
 ## Open source projects
 
-## [Thesis, Analysis of Large Scale Randomized Load Balancing Policies](https://github.com/THellemans/Thesis-Analysis-of-Large-Scale-Randomized-Load-Balancing-Policies)
+## [Thesis, Analysis of Large Scale Randomized Load Balancing Policies](https://github.com/THellemans/thesis)
 
-In addition to the text and code which I shared at this [github repository]() I also made videos which give a general overview of each chapter in my thesis, these videos can be found at this [youtube playlist](https://www.youtube.com/playlist?list=PLRcKwIHscs19xypNk9B7uMimChab8_iWE).
+In addition to the text and code which I shared at this [github repository](https://github.com/THellemans/thesis) I also made videos which give a general overview of each chapter in my thesis, these videos can be found at this [youtube playlist](https://www.youtube.com/playlist?list=PLRcKwIHscs19xypNk9B7uMimChab8_iWE).
 
 ![image](figures/figure_expected_workload-removebg.png)
 
