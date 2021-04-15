@@ -171,7 +171,7 @@ A solution is completely defined by giving a path for each vehicle, we denote by
 
 #### Greedy initial solution
 
-For the greedy solution, we add the customers to the schedule of a vehicle one at a time. To add a customer, we consider all locations we can put it for all vehicles. That is, we loop over all vehicles and loop over all positions in the vehicle's path we can put the customer which we need to insert. We then add the customer to the location which yields the minimal additional travel distance.
+For the greedy solution, we add the customers to the schedule of a vehicle one at a time. To add a customer, we consider all locations we can put it for all vehicles. That is, we loop over all vehicles and loop over all positions in the vehicle's path we can put the customer which we need to insert. We then add the customer to the location which yields the minimal additional travel distance. We can see how this algorithm works from a simple example. We removed 4 connections in our original setting and add new customers to the solution one by one. One important thing to note here is the fact that we always take an arbitrary customer which we add to the solution! Therefore adding a new customer to the solution always has complexity O(n).
 
 ![image](figures/VRP3-removebg-preview.png)
 ![image](figures/VRP4-removebg-preview.png)
@@ -196,6 +196,7 @@ All we really need now is a way to **destroy** an existing solution, that is a m
 It is not hard to imagine that you can come up with even more destroy methods. The ALNS now exists in iteratively using a destroy and repair method to attempt to obtain a better solution.
 
 ![image](figures/VRP2-removebg-preview.png)
+![image](figures/VRP3-removebg-preview.png)
 
 #### Combining everything
 
