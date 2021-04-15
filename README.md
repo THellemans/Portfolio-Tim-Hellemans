@@ -1,6 +1,6 @@
 ## Biography
 
-<img style="float: right;" src="profile_pic.JPG" alt="profile_pic" width="200"/>
+<img style="float: right;" src="figures/profile_pic.JPG" alt="profile_pic" width="200"/>
  I am currently wrapping up my **Phd** in **computer science** at the University of Antwerp which I started after graduating **summa cum laude** in mathematics. I have been using **mean field methods** to analyze **load balancing policies** in systems with many servers. 
 My Phd mainly required a lot of **probability theory** (in particular Markov chain theory), **calculus** and **programming**.
 During my Phd I have come into contact with quite a few optimization and forecasting problems. I am currently on the lookout to start working as a **data scientist**.
@@ -30,7 +30,7 @@ In particular I have been accepted for the [Sigmetrics Conference](https://en.wi
 
 In addition to the text and code which I shared at this [github repository]() I also made videos which give a general overview of each chapter in my thesis, these videos can be found at this [youtube playlist](https://www.youtube.com/playlist?list=PLRcKwIHscs19xypNk9B7uMimChab8_iWE).
 
-![image](figure_expected_workload-removebg.png)
+![image](figures/figure_expected_workload-removebg.png)
 
 Markov processes have found widespread use in the analysis of computer systems and beyond. Over time the size of the systems under consideration has grown considerably, e.g. Google has hundreds
 of thousands of servers located in its various data centers. This growth in the system size has made
