@@ -28,6 +28,8 @@ In particular I have been accepted for the [Sigmetrics Conference](https://en.wi
 
 ## [Thesis, Analysis of Large Scale Randomized Load Balancing Policies](https://github.com/THellemans/Thesis-Analysis-of-Large-Scale-Randomized-Load-Balancing-Policies)
 
+In addition to the text and code which I shared at this [github repository]() I also made videos which give a general overview of each chapter in my thesis, these videos can be found at this [youtube playlist](https://www.youtube.com/playlist?list=PLRcKwIHscs19xypNk9B7uMimChab8_iWE).
+
 ![image](figure_expected_workload-removebg.png)
 
 Markov processes have found widespread use in the analysis of computer systems and beyond. Over time the size of the systems under consideration has grown considerably, e.g. Google has hundreds
@@ -55,7 +57,7 @@ The image we started with may be seen as an example of a problem setting we anal
  - The number of cars waiting to receive service.
  - The amount of service received by the job at the head of the queue.
 
-At each arrival instant, the car considers 2 queues and decides which queue it will join based on the provided information. We developped a general method which may be used to analyse load balancing policies which distribute jobs in this context. We found that making use of the age of a job may result in a reduction in waiting time of up to 80% for jobs which are sufficiently variable (we used a squared coefficient of variation of 10).
+At each arrival instant, the car considers 2 queues and decides which queue it will join based on the provided information. We developed a general method which may be used to analyse load balancing policies which distribute jobs in this context. We found that making use of the age of a job may result in a reduction in waiting time of up to 80% for jobs which are sufficiently variable (we used a squared coefficient of variation of 10).
 
 ## [Discrete Optimization: Capacitated Vehicle Routing Problem](https://github.com/THellemans/vehicle_routing_problem)
 
