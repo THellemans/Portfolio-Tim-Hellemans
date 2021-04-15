@@ -79,7 +79,7 @@ We found that an Adaptive Large Neighborhood Search works especially well for th
 
 We are given the geographical location of a warehouse (say `(x_0, y_0)`) and the location of `n` customers (say `(x_i, y_i)` for `i=1,...,n`). We have `m` vehicles available at the warehouse and need to ship out goods to each of the customers by sending out vehicles from this warehouse. After supplying all customers on their path these vehicles need to return to the warehouse. Furthermore, each customer has some demand `D_i` and each vehicle has a maximal capacity `C` (which is equal for all vehicles). Our task is now to send out these vehicles such that we visit each customer exactly once while minimizing the total distance travelled. As such this problem can be seen as a generalization of the well known [travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem).
 
-<img style="float: right;" src="VRP1.png" alt="profile_pic" width="200"/>
+![image](figures/VRP1-removebg-preview.png)
 
 ### Why Adaptive Large Neighborhood Search?
 
@@ -161,6 +161,11 @@ A solution is completely defined by giving a path for each vehicle, we denote by
 
 For the greedy solution, we add the customers to the schedule of a vehicle one at a time. To add a customer, we consider all locations we can put it for all vehicles. That is, we loop over all vehicles and loop over all positions in the vehicle's path we can put the customer which we need to insert. We then add the customer to the location which yields the minimal additional travel distance.
 
+![image](figures/VRP3-removebg-preview.png)
+![image](figures/VRP4-removebg-preview.png)
+![image](figures/VRP5-removebg-preview.png)
+![image](figures/VRP6-removebg-preview.png)
+
 #### Repair methods
 
 Our greedy initial solution not only makes an initial solution, but we can also be used to **repair** an existing solution. Some variants which one may want to use include:
@@ -177,6 +182,8 @@ All we really need now is a way to **destroy** an existing solution, that is a m
   - Remove a long path and some of the paths which are close to this long path
 
 It is not hard to imagine that you can come up with even more destroy methods. The ALNS now exists in iteratively using a destroy and repair method to attempt to obtain a better solution.
+
+![image](figures/VRP2-removebg-preview.png)
 
 #### Combining everything
 
