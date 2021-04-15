@@ -1,9 +1,8 @@
 ## Biography
 
 <img style="float: right;" src="profile_pic.JPG" alt="profile_pic" width="200"/>
- I am currently wrapping up my Phd in computer science at the University of Antwerp. I have been using *mean field methods* to analyze *load balancing policies* in systems with many servers. 
+ I am currently wrapping up my **Phd** in **computer science** at the University of Antwerp which I started after graduating **summa cum laude** in mathematics. I have been using **mean field methods** to analyze **load balancing policies** in systems with many servers. 
 My Phd mainly required a lot of **probability theory** (in particular Markov chain theory), **calculus** and **programming**.
-Before starting my Phd I graduated **summa cum laude** in mathematics at the University of Antwerp.
 During my Phd I have come into contact with quite a few optimization and forecasting problems. I am currently on the lookout to start working as a **data scientist**.
 I published 8 independent papers (6 as first author) which can be viewed on my [Google Scholar](https://scholar.google.com/citations?user=mrMXW1EAAAAJ&hl=en&oi=sra).
 In particular I have been accepted for the [Sigmetrics Conference](https://en.wikipedia.org/wiki/SIGMETRICS#2020) three times, this is significant as the Sigmetrics conference may be seen as the flagship conference for my area of research. From Wikipedia: 
@@ -15,14 +14,15 @@ In particular I have been accepted for the [Sigmetrics Conference](https://en.wi
 
  1. Probability theory
  2. Statistics
- 3. Mathematics
- 4. Python
- 5. Matlab
- 6. (Discrete) optimization
- 7. Data Science
- 8. Machine Learning
- 9. Scheduling problems
- 10. Routing problems
+ 3. Data Science
+ 4. Mathematics
+ 5. Python
+ 6. Matlab
+ 7. Machine Learning
+ 8. Forecasting
+ 9. (Discrete) optimization
+ 10. Scheduling problems
+ 11. Routing problems
 
 ## Open source projects
 
@@ -49,25 +49,25 @@ system becomes a set of partial differential equations (PDEs).
 In this thesis, we initiated the analysis of workload dependent load balancing policies. For these policies, the aforementioned PDEs can be reduced to a single integro differential equation or to ordinary differential equations. Therefore, these policies are relatively easy to study for general job sizes. We found that many existing policies fall into the category of workload dependent policies. Besides obtaining numerical methods to analyse these load balancing policies, we additionally prove many analytical results for these type of models.
 
 In addition, we recognized that studying the more 
-classic* queue length dependent load balancing policies for general job sizes is indeed difficult. However, if one restricts to phase type job sizes (which are dense in the set of all probability distributions) the analysis simplifies significantly. Furthermore, we introduce and analyse a set of policies which take both the queue length and the age of the job currently receiving service into account.
+classic queue length dependent load balancing policies for general job sizes is indeed difficult. However, if one restricts to phase type job sizes (which are dense in the set of all probability distributions) the analysis simplifies significantly. Furthermore, we introduce and analyse a set of policies which take both the queue length and the age of the job currently receiving service into account.
 
 The image we started with may be seen as an example of a problem setting we analysed. There are multiple queues (here queues are represented by toll gates) at which jobs (in this case cars) arrive. For each queue we know two things: 
  - The number of cars waiting to receive service.
  - The amount of service received by the job at the head of the queue.
 
-At each arrival instant, the car considers *2* queues and decides which queue it will join based on the provided information. We developped a general method which may be used to analyse load balancing policies which distribute jobs in this context. We found that making use of the age of a job may result in a reduction in waiting time of up to *80%* for jobs which are sufficiently variable (we used a squared coefficient of variation of 10).
+At each arrival instant, the car considers 2 queues and decides which queue it will join based on the provided information. We developped a general method which may be used to analyse load balancing policies which distribute jobs in this context. We found that making use of the age of a job may result in a reduction in waiting time of up to 80% for jobs which are sufficiently variable (we used a squared coefficient of variation of 10).
 
 ## [Discrete Optimization: Capacitated Vehicle Routing Problem](https://github.com/THellemans/vehicle_routing_problem)
 
 ### Motivation
 
-Want to create a work schedule? Do you need to supply your customers with product? Need to fill a vehicle with as many products as possible? Want to create a schedule for your airline? All these problems are discrete optimization problems. These problems are still solved by hand at many companies, however there exist efficient mathematical algorithms which solve these problems to optimality. This way companies can reduce their costs in 2 ways:
+Want to create a work schedule? Do you need to supply your customers with product? Need to fill a vehicle with as many products as possible? Want to create a schedule for your airline? All these problems are discrete optimization problems. They are still solved by hand at many companies, however there exist efficient mathematical algorithms which solve these problems to optimality. This way companies can reduce their costs in 2 ways:
  - Better (optimal) solutions to their problem and
  - employees no longer need to spend their time solving these problems by hand.
 
 The Capacitated Vehicle Routing Problem (CVRP) is a well known optimization problem which (attempts) to answer the question:
 
-> What is the optimal set of routes for a fleet of vehicles to traverse in order to deliver to a given set of customers?
+> What is the optimal set of routes for a fleet of vehicles to traverse in order to deliver goods to a given set of customers?
 
 Variations of this question are interesting in many practical applications such as supplying customers with products and creating a flight schedule.
 
@@ -83,7 +83,7 @@ We are given the geographical location of a warehouse (say `(x_0, y_0)`) and the
 
 #### Is this a discrete optimization problem?
 
-Maybe we should first ask the question, why is this a **discrete** optimization problem? In order to solve this problem, we have to decide for every path (that is, every connection between two customers or the warehouse and a customer) if we want to send a vehicle along that road. This is a `discrete choice`, that is: we either send the vehicle or we don't, we can't send half a vehicle along a path. The value of our decision variables is either `0` (that is, we don't send the vehicle) or `1` (that is, we do send the vehicle). Therefore this problem is a discrete optimization problem.
+Maybe we should first ask the question, why is this a **discrete** optimization problem? In order to solve the CVRP, we have to decide for every path (that is, every connection between two customers or the warehouse and a customer) if we want to send a vehicle along that road. This is a `discrete choice`, that is: we either send the vehicle or we don't, we can't send half a vehicle along a path. The value of our decision variables is either `0` (that is, we don't send the vehicle) or `1` (that is, we do send the vehicle). Therefore this problem is a discrete optimization problem.
 
 #### Integer Programming solution for the ordinary vehicle routing problem
 
@@ -121,7 +121,7 @@ A subtour is a circular path, the solution should exist of at most `m` subtours 
 
 <img src="https://render.githubusercontent.com/render/math?math=\forall S \neq \varempty, 0 \notin S: \sum_{i \in S} \sum_{j \notin S}  p_{i,j} \geq 1">.
 
-Using these variables and constraints, we can quickly implement a solution to the VRP by making use a constraint programming framework such as [OR-Tools](https://developers.google.com/optimization/cp). Using this implementation, you can additionally solve the problem using an integer programming solver such as [Gurobi](https://www.gurobi.com/), see also [here](https://developers.google.com/optimization).
+Using these variables and constraints, we can quickly implement a solution to the CVRP by making use a constraint programming framework such as [OR-Tools](https://developers.google.com/optimization/cp). Using this implementation, you can additionally solve the problem using an integer programming solver such as [Gurobi](https://www.gurobi.com/), see also [here](https://developers.google.com/optimization).
 
 This approach has several advantages:
  - It is not hard to quickly come up with & implement this solution.
@@ -134,7 +134,7 @@ This approach has several advantages:
   3 Add constraints associated to the subtours present in the optimal solution to the integer programming problem.
   4 Solve the integer programming problem and return to step 2.
 
- To further speed up the optimizer, you can hot start the VRP by using a greedy algorithm to obtain an initial solution.
+ To further speed up the optimizer, you can hot start the CVRP by using a greedy algorithm to obtain an initial solution.
 
 #### Integer Programming solution for the capacitated vehicle routing problem
 
@@ -143,7 +143,7 @@ When we add a finite capacity `C` to each vehicle and a demand `D_i` to each cus
 
 However, this does increase the number of variables which slows down the optimizer even further.
 
- While this method is guaranteed to work, it becomes too slow to solve large scale VRPs. Therefore, we have implemented an **Adaptive Large Neighborhood Search** algorithm to quickly solve the VRP. 
+ While this method is guaranteed to work, it becomes too slow to solve large scale CVRPs. Therefore, we have implemented an **Adaptive Large Neighborhood Search** algorithm to quickly solve the CVRP. 
 
  Another alley which is worth investigating is to use [Column Generation](https://arxiv.org/ftp/arxiv/papers/1806/1806.00831.pdf) to obtain the optimal solution. This method exists in associating a variable to each legal tour (that is each tour which passes by the warehouse) and reformulating the aforementioned constraints using these variables. One then solves that problem as an ordinary LP problem and iteratively adds integrality constraints (that, is a tour variable must be equal to 0 or 1) to obtain a legal solution.
 
