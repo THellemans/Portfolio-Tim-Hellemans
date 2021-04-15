@@ -30,7 +30,7 @@ In particular I have been accepted for the [Sigmetrics Conference](https://en.wi
 
 In addition to the text and code which I shared at this [github repository](https://github.com/THellemans/thesis) I also made videos which give a general overview of each chapter in my thesis, these videos can be found at this [youtube playlist](https://www.youtube.com/playlist?list=PLRcKwIHscs19xypNk9B7uMimChab8_iWE).
 
-<img style="float: right;" src="figures/figure_expected_workload-removebg.png" alt="profile_pic" width="600"/>
+<img style="float: right;" src="figures/figure_expected_workload-removebg.png" alt="profile_pic" width="900"/>
 
 ### Layman summary
 Markov processes have found widespread use in the analysis of computer systems and beyond. Over time the size of the systems under consideration has grown considerably, e.g. Google has hundreds
