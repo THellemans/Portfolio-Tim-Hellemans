@@ -1,4 +1,4 @@
-## Biography
+# Biography
 
 <img style="float: right;" src="figures/profile_pic.JPG" alt="profile_pic" width="200"/>
  I am currently wrapping up my **Phd** in **computer science** at the University of Antwerp which I started after graduating **summa cum laude** in mathematics. I have been using **mean field methods** to analyze **load balancing policies** in systems with many servers. 
@@ -9,13 +9,13 @@ In particular I have been accepted (as first author) for the [**Sigmetrics Confe
 
 >It is also the name of an annual 'flagship' conference, organized by SIGMETRICS since 1973, which is considered to be the leading conference in performance analysis and modeling in the world. Known to have an extremely low acceptance rate (~15%), many of the landmark works in the area have been published through it.
 
-## Table of Contents
+# Table of Contents
 
  - [Interests](#interests)
  - [Open source projects](#open-source-projects)
  	- 
 
-## Interests
+# Interests
 
  - Probability theory
  - Statistics
@@ -31,15 +31,15 @@ In particular I have been accepted (as first author) for the [**Sigmetrics Confe
 
 {:toc}
 
-## Open source projects
+# Open source projects
 
-### [Thesis, Analysis of Large Scale Randomized Load Balancing Policies](https://github.com/THellemans/thesis)
+## [Thesis, Analysis of Large Scale Randomized Load Balancing Policies](https://github.com/THellemans/thesis)
 
 In addition to the text and code which I shared at my [github repository](https://github.com/THellemans/thesis) I also made videos which give a general overview of each chapter in my thesis, these videos can be found at my [youtube playlist](https://www.youtube.com/playlist?list=PLRcKwIHscs19xypNk9B7uMimChab8_iWE).
 
 <img style="float: right;" src="figures/figure_expected_workload-removebg.png" alt="profile_pic" width="900"/>
 
-#### Layman summary
+### Layman summary
 Markov processes have found widespread use in the analysis of computer systems and beyond. Over time the size of the systems under consideration has grown considerably, e.g. Google has hundreds
 of thousands of servers located in its various data centers. This growth in the system size has made
 conventional methods to analyse these Markov processes infeasible.
@@ -67,7 +67,7 @@ The image we started with may be seen as an example of a problem setting we anal
 
 At each arrival instant, the car considers 2 queues and decides which queue it will join based on the provided information. We developed a general method which may be used to analyse load balancing policies which distribute jobs in this context. We found that making use of the age of a job may result in a reduction in waiting time of up to 80% for jobs which are sufficiently variable (we used a squared coefficient of variation of 10).
 
-#### List of publications:
+### List of publications:
  - Tim Hellemans and Benny Van Houdt On the Power-of-d Choices with Least Loaded Server Selection Proceedings of the ACM on Measurement and Analysis of Computing Systems - SIGMETRICS, Vol. 2, No 2, Article No. 27, Jun 2018. ACM Sigmetrics 2018
  - Tim Hellemans, Tejas Bodas and Benny Van Houdt Performance Analysis of Workload Dependent Load Balancing Policies Proceedings of the ACM on Measurement and Analysis of Computing Systems - SIGMETRICS, Vol. 3, No 2, Article No. 33, Jun 2019. ACM Sigmetrics 2019
  - Tim Hellemans and Benny Van Houdt. "Mean Waiting Time in Large-Scale and Critically Loaded Power of d Load Balancing Systems." arXiv preprint arXiv:2004.00876 (2020). To appear in ACM Sigmetrics 2021.
@@ -78,9 +78,9 @@ At each arrival instant, the car considers 2 queues and decides which queue it w
  - Wouter Minnebo, Tim Hellemans and Benny Van HoudtOn a Class of Push and Pull Strategies with Single Migrations and Limited Probe Rate Performance Evaluation, Vol. 113, pp. 42-67, 2017.
  - Ben Berckmoes, Tim Hellemans, Mark Sioen, & Jan Van Casteren An application of approach theory to the relative Hausdorff measure of non-compactness for the Wasserstein metric. Journal of Mathematical Analysis and Applications (2017), 449(2), 1770-1789.
 
-### [Discrete Optimization: Capacitated Vehicle Routing Problem](https://github.com/THellemans/vehicle_routing_problem)
+## [Discrete Optimization: Capacitated Vehicle Routing Problem](https://github.com/THellemans/vehicle_routing_problem)
 
-#### Motivation
+### Motivation
 
 Want to create a work schedule? Do you need to supply your customers with products? Need to fill a vehicle with as many products as possible? Want to create a schedule for your airline? All these problems are discrete optimization problems. They are still solved by hand at many companies, however there exist efficient mathematical algorithms which solve these problems to optimality. This way companies can reduce their costs in 2 ways:
  - Better (optimal) solutions to their problem and
@@ -94,19 +94,19 @@ Variations of this question are interesting in many practical applications such 
 
 We found that an Adaptive Large Neighborhood Search works especially well for this optimization problem.
 
-#### Formulation of the problem
+### Formulation of the problem
 
 We are given the geographical location of a warehouse (say `(x_0, y_0)`) and the location of `n` customers (say `(x_i, y_i)` for `i=1,...,n`). We have `m` vehicles available at the warehouse and need to ship out goods to each of the customers by sending out vehicles from this warehouse. After supplying all customers on their path these vehicles need to return to the warehouse. Furthermore, each customer has some demand `D_i` and each vehicle has a maximal capacity `C` (which is equal for all vehicles). Our task is now to send out these vehicles such that we supply each customer with their required goods while minimizing the total distance travelled. As such this problem can be seen as a generalization of the well known [travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem).
 
 ![image](figures/VRP1-removebg-preview.png)
 
-#### Why Adaptive Large Neighborhood Search?
+### Why Adaptive Large Neighborhood Search?
 
-##### Is this a discrete optimization problem?
+#### Is this a discrete optimization problem?
 
 Maybe we should first ask the question, why is this a **discrete** optimization problem? In order to solve the CVRP, we have to decide for every path (that is, every connection between two customers or the warehouse and a customer) if we want to send a vehicle along that road. This is a `discrete choice`, that is: we either send the vehicle or we don't, we can't send half a vehicle along a path. The value of our decision variables is either `0` (that is, we don't send the vehicle) or `1` (that is, we do send the vehicle). Therefore this problem is a discrete optimization problem.
 
-##### Integer Programming solution for the ordinary vehicle routing problem
+#### Integer Programming solution for the ordinary vehicle routing problem
 
 One approach which should be considered for all discrete optimization problems is to formulate the problem as an [Integer Programming Problem](https://en.wikipedia.org/wiki/Integer_programming). That is, we need to define decision variables, constraints and an objective function.
 There are a couple of advantages to using an Integer Programming (IP) to solve discrete optimization problems:
@@ -158,7 +158,7 @@ This approach has several advantages:
 
  To further speed up the optimizer, you can hot start the CVRP by using a greedy algorithm to obtain an initial solution.
 
-##### Integer Programming solution for the capacitated vehicle routing problem
+#### Integer Programming solution for the capacitated vehicle routing problem
 
 When we add a finite capacity `C` to each vehicle and a demand `D_i` to each customer, the above described integer programming formulation no longer works and we can't simply add some constraints to assure the capacity constraints are satisfied. The most straightforward method to adapt the IPP described above is to add an index `k` to the path variables we defined earlier. That is, we define the variables <img src="https://render.githubusercontent.com/render/math?math=p_{k,i,j}"> to denote if vehicle `k` travels on the path from `i` to `j`. This way we can easily add the capacity constraint by adding the constraint:
 <center> <img src="https://render.githubusercontent.com/render/math?math=\forall k: \sum_{i,j} D_i p_{k,i,j} \leq C">. </center>
@@ -169,15 +169,15 @@ However, this does increase the number of variables which slows down the optimiz
 
  Another alley which is worth investigating is to use [Column Generation](https://arxiv.org/ftp/arxiv/papers/1806/1806.00831.pdf) to obtain the optimal solution. This method exists in associating a variable to each legal tour (that is each tour which passes by the warehouse) and reformulating the aforementioned constraints using these variables. One then solves that problem as an ordinary LP problem and iteratively adds integrality constraints (that, is a tour variable must be equal to 0 or 1) to obtain a legal solution.
 
-### The Adaptive Large Neighborhood Search algorithm
+## The Adaptive Large Neighborhood Search algorithm
 
 The **Adaptive Large Neighborhood Search (ALNS)** algorithm is a simple destroy and repair algorithm. This means that we start by generating an initial solution and then adapt this solution by iteratively destroying parts of the solution and then repairing them. As the parts which we destroy might be substantial (sometimes we might even destroy half of the existing solution) the neighborhoods in which we look for a new (better) soluton are large. The adaptive stems from the fact that you implement multiple destroy and repair methods and the algorithm will itself detect which work best for the problem at hand, that is the algorithm adapts itself to the problem you are trying to solve. 
 
-#### Representation of solution
+### Representation of solution
 
 A solution is completely defined by giving a path for each vehicle, we denote by `paths[k]` the path of vehicle `k`. This is an ordered list which contains the sequence of all locations vehicle `k` visits. We initialize `paths[k] = [0]`, that is each vehicle simply remains at the warehouse. 
 
-#### Greedy initial solution
+### Greedy initial solution
 
 For the greedy solution, we add the customers to the schedule of a vehicle one at a time. To add a customer, we consider all locations we can put it for all vehicles. That is, we loop over all vehicles and loop over all positions in the vehicle's path we can put the customer which we need to insert. We then add the customer to the location which yields the minimal additional travel distance. We can see how this algorithm works from a simple example. We removed 4 connections in our original setting and add new customers to the solution one by one. One important thing to note here is the fact that we always take an arbitrary customer which we add to the solution! Therefore adding a new customer to the solution always has complexity O(n).
 
@@ -186,7 +186,7 @@ For the greedy solution, we add the customers to the schedule of a vehicle one a
 ![image](figures/VRP5-removebg-preview.png)
 ![image](figures/VRP6-removebg-preview.png)
 
-#### Repair methods
+### Repair methods
 
 Our greedy initial solution not only makes an initial solution, but we can also be used to **repair** an existing solution. Some variants which one may want to use include:
  - Add customers in a specific order (based on location or demand).
@@ -194,7 +194,7 @@ Our greedy initial solution not only makes an initial solution, but we can also 
 
 This way we can make a set of repair methods.
 
-#### Destroy methods
+### Destroy methods
 
 All we really need now is a way to **destroy** an existing solution, that is a method to remove a part from the solution such that we can repair the solution again. Examples of destroy methods are:
  - Remove the path of a number of vehicles. These vehicles may be selected arbitrarily, according to the fraction of their total travel distance over the number of customers they serve or some other quantity.
@@ -206,7 +206,7 @@ It is not hard to imagine that you can come up with even more destroy methods. T
 ![image](figures/VRP2-removebg-preview.png)
 ![image](figures/VRP3-removebg-preview.png)
 
-#### Combining everything
+### Combining everything
 
 We start by generating an initial solution using the above described method. We additionally have some `temperature` which controls how likely we are to accept a solution which increases the objective function. We initialize the `temperature` to some value (say `100`). Furthermore, we define probability distributions `prob_destroy` and `prob_repair` which represent the probability that you will use a certain destroy/repair method. We initialize these probabilistic vectors as the uniform distribution.
 
