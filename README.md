@@ -18,7 +18,7 @@ In particular I have been accepted (as first author) for the [**Sigmetrics Confe
  - [Capacitated Vehicle Routing Problem](#capacitated-vehicle-routing-problem)
    - [Motivation](#motivation)
    - [Formulation of the problem](#formulation-of-the-problem)
-   - [Why Adaptive Large Neighborhood Search?](#why-adaptive-large-neighborhood-search?)
+   - [Why Adaptive Large Neighborhood Search?](#why-adaptive-large-neighborhood-search)
    - [Is this a discrete optimization problem?](#is-this-a-discrete-optimization-problem?)
    - [Integer Programming solution for the ordinary vehicle routing problem](#integer-programming-solution-for-the-ordinary-vehicle-routing-problem)
    - [Integer Programming solution for the capacitated vehicle routing problem](#integer-programming-solution-for-the-capacitated-vehicle-routing-problem)
@@ -115,7 +115,7 @@ We are given the geographical location of a warehouse (say `(x_0, y_0)`) and the
 
 ![image](figures/VRP1-removebg-preview.png)
 
-### Why Adaptive Large Neighborhood Search?
+### Why Adaptive Large Neighborhood Search
 
 #### Is this a discrete optimization problem?
 
