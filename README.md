@@ -96,7 +96,7 @@ At each arrival instant, the car considers 2 queues and decides which queue it w
 
 ## The Capacitated Vehicle Routing Problem
 
-The code assiciated to this project may be found at [this github repository]((https://github.com/THellemans/vehicle_routing_problem)).
+Here I provide a description of my solution to the Capacitated Vehicle Routing Problem (CVRP). I first describe how to solve the CVRP using Integer Programming, this implementation may be used to solve small instances to optimality. For larger instances, we used an Adaptive Large Neighborhood Search algorithm. The code associated to this project may be found at [this github repository]((https://github.com/THellemans/vehicle_routing_problem)).
 
 ### Motivation
 
