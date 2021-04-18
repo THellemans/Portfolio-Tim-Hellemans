@@ -9,6 +9,8 @@ In particular I have been accepted (as first author) for the [**Sigmetrics Confe
 
 >It is also the name of an annual 'flagship' conference, organized by SIGMETRICS since 1973, which is considered to be the leading conference in performance analysis and modeling in the world. Known to have an extremely low acceptance rate (~15%), many of the landmark works in the area have been published through it.
 
+ - [Interests](#interests)
+ - [Open source projects](#open-source-projects)
 
 ## Interests
 
