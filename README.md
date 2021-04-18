@@ -13,7 +13,7 @@ In particular I have been accepted (as first author) for the [**Sigmetrics Confe
 
  - [Interests](#interests)
  - [Open source projects](#open-source-projects)
- 	- 
+ 	- []
 
 # Interests
 
@@ -29,7 +29,6 @@ In particular I have been accepted (as first author) for the [**Sigmetrics Confe
  - Scheduling problems
  - Routing problems
 
-{:toc}
 
 # Open source projects
 
@@ -67,7 +66,7 @@ The image we started with may be seen as an example of a problem setting we anal
 
 At each arrival instant, the car considers 2 queues and decides which queue it will join based on the provided information. We developed a general method which may be used to analyse load balancing policies which distribute jobs in this context. We found that making use of the age of a job may result in a reduction in waiting time of up to 80% for jobs which are sufficiently variable (we used a squared coefficient of variation of 10).
 
-### List of publications:
+### List of publications
  - Tim Hellemans and Benny Van Houdt On the Power-of-d Choices with Least Loaded Server Selection Proceedings of the ACM on Measurement and Analysis of Computing Systems - SIGMETRICS, Vol. 2, No 2, Article No. 27, Jun 2018. ACM Sigmetrics 2018
  - Tim Hellemans, Tejas Bodas and Benny Van Houdt Performance Analysis of Workload Dependent Load Balancing Policies Proceedings of the ACM on Measurement and Analysis of Computing Systems - SIGMETRICS, Vol. 3, No 2, Article No. 33, Jun 2019. ACM Sigmetrics 2019
  - Tim Hellemans and Benny Van Houdt. "Mean Waiting Time in Large-Scale and Critically Loaded Power of d Load Balancing Systems." arXiv preprint arXiv:2004.00876 (2020). To appear in ACM Sigmetrics 2021.
