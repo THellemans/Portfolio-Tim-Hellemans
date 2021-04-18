@@ -12,17 +12,19 @@ In particular I have been accepted (as first author) for the [**Sigmetrics Confe
 
 ## Interests
 
- 1. Probability theory
- 2. Statistics
- 3. Data Science
- 4. Mathematics
- 5. Python
- 6. Matlab
- 7. Machine Learning
- 8. Forecasting
- 9. (Discrete) optimization
- 10. Scheduling problems
- 11. Routing problems
+ - Probability theory
+ - Statistics
+ - Data Science
+ - Mathematics
+ - Python
+ - Matlab
+ - Machine Learning
+ - Forecasting
+ - (Discrete) optimization
+ - Scheduling problems
+ - Routing problems
+
+{:toc}
 
 ## Open source projects
 
