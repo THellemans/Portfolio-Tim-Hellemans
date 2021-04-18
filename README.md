@@ -18,10 +18,10 @@ In particular I have been accepted (as first author) for the [**Sigmetrics Confe
  - [Capacitated Vehicle Routing Problem](#capacitated-vehicle-routing-problem)
    - [Motivation](#motivation)
    - [Formulation of the problem](#formulation-of-the-problem)
-   - [Why Adaptive Large Neighborhood Search?](#why-adaptive-large-neighborhood-search)
-   - [Is this a discrete optimization problem?](#is-this-a-discrete-optimization-problem?)
-   - [Integer Programming solution for the ordinary vehicle routing problem](#integer-programming-solution-for-the-ordinary-vehicle-routing-problem)
-   - [Integer Programming solution for the capacitated vehicle routing problem](#integer-programming-solution-for-the-capacitated-vehicle-routing-problem)
+   - [Why use Adaptive Large Neighborhood Search](#why-adaptive-large-neighborhood-search)
+     - [It is a discrete optimization problem](#it-is-a-discrete-optimization-problem)
+     - [Integer Programming solution for the ordinary vehicle routing problem](#integer-programming-solution-for-the-ordinary-vehicle-routing-problem)
+     - [Integer Programming solution for the capacitated vehicle routing problem](#integer-programming-solution-for-the-capacitated-vehicle-routing-problem)
    - [The Adaptive Large Neighborhood Search algorithm](#the-adaptive-large-neighborhood-search-algorithm)
      - [Representation of solution](#representation-of-solution)
      - [Greedy initial solution](#greedy-initial-solution)
@@ -117,7 +117,7 @@ We are given the geographical location of a warehouse (say `(x_0, y_0)`) and the
 
 ### Why Adaptive Large Neighborhood Search
 
-#### Is this a discrete optimization problem?
+#### It is a discrete optimization problem
 
 Maybe we should first ask the question, why is this a **discrete** optimization problem? In order to solve the CVRP, we have to decide for every path (that is, every connection between two customers or the warehouse and a customer) if we want to send a vehicle along that road. This is a `discrete choice`, that is: we either send the vehicle or we don't, we can't send half a vehicle along a path. The value of our decision variables is either `0` (that is, we don't send the vehicle) or `1` (that is, we do send the vehicle). Therefore this problem is a discrete optimization problem.
 
