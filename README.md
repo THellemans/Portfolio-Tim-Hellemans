@@ -1,5 +1,5 @@
 # Biography
-
+  <a href="url"><img src="https://desmond75.github.io/img/IMG_20171214_095012.jpg" height="auto" width="200" style="border-radius:50%"></a>
 <img style="float: right;" src="figures/profile_pic.JPG" alt="profile_pic" height="auto" width="200" style="border-radius:50%">
  I am currently wrapping up my **Phd** in **computer science** at the University of Antwerp which I started after graduating **summa cum laude** in mathematics. I have been using **mean field methods** to analyze **load balancing policies** in systems with many servers. 
 My Phd mainly required a lot of **probability theory** (in particular Markov chain theory), **calculus** and **programming**.
