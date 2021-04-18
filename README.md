@@ -1,6 +1,6 @@
 # Biography
 
-  <img align="left" img src="figures/profile_pic_cropped.png" alt="hi" class="inline" width="200" height="auto" style="border-radius:50%">
+  <img align="left" img src="figures/profile_pic_cropped.png" alt="hi" class="inline" width="200" height="auto" style="border-radius:50%" shape-margin-outside: content-box>
 
 I am currently wrapping up my **Phd** in **computer science** at the University of Antwerp which I started after graduating **summa cum laude** in mathematics. I am now on the lookout to start working as a **data scientist**. I have been using **mean field methods** to analyze **load balancing policies** in systems with many servers. 
 My Phd mainly required a lot of **probability theory** (in particular Markov chain theory), **calculus** and **programming**.
