@@ -13,8 +13,8 @@ In particular I have been accepted (as first author) for the [**Sigmetrics Confe
 
  - [Interests](#interests)
  - [Open source projects](#open-source-projects)
- 	- [Thesis, Analysis of Large Scale Randomized Load Balancing Policies](#[Thesis, Analysis of Large Scale Randomized Load Balancing Policies](https://github.com/THellemans/thesis))
- 		- [Layman summary](#layman-summary)
+  -[Thesis, Analysis of Large Scale Randomized Load Balancing Policies](#[thesis,-analysis-of-large-scale-randomized-load-balancing-policies](https://github.com/THellemans/thesis))
+  - [Layman summary](#layman-summary)
  		- [List of publications](#list-of-publications)
  	- [Discrete Optimization: Capacitated Vehicle Routing Problem](#[Discrete Optimization: Capacitated Vehicle Routing Problem](https://github.com/THellemans/vehicle_routing_problem))
  		- [Motivation](#motivation)
