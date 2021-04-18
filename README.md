@@ -12,10 +12,10 @@ In particular I have been accepted (as first author) for the [**Sigmetrics Confe
 
  - [Interests](#interests)
  - [Open source projects](#open-source-projects)
-   - [Analysis of Large Scale Randomized Load Balancing Policies](#[analysis-of-large-scale-randomized-load-balancing-policies])
+   - [Analysis of Large Scale Randomized Load Balancing Policies](#analysis-of-large-scale-randomized-load-balancing-policies)
      - [Layman summary](#layman-summary)
      - [List of publications](#list-of-publications)
- - [Capacitated Vehicle Routing Problem](#capacitated-vehicle-routing-problem)
+ - [The Capacitated Vehicle Routing Problem](#the-capacitated-vehicle-routing-problem)
    - [Motivation](#motivation)
    - [Formulation of the problem](#formulation-of-the-problem)
    - [Why use Adaptive Large Neighborhood Search](#why-adaptive-large-neighborhood-search)
