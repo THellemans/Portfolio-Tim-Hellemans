@@ -1,6 +1,6 @@
 # Biography
 
-  <img align="left" img src="figures/profile_pic.JPG" alt="hi" class="inline" width="200" height="auto"/>
+  <img align="left" img src="figures/profile_pic.JPG" alt="hi" class="inline" width="200" height="auto"/ style="border-radius:50%">
 
 
   <a href="url"><img src="https://github.com/THellemans/Portfolio-Tim-Hellemans/blob/main/figures/profile_pic.JPG" height="auto" width="200" style="border-radius:50%"></a>
