@@ -13,10 +13,10 @@ In particular I have been accepted (as first author) for the [**Sigmetrics Confe
 
  - [Interests](#interests)
  - [Open source projects](#open-source-projects)
-   - [Thesis, Analysis of Large Scale Randomized Load Balancing Policies](#[thesis,-analysis-of-large-scale-randomized-load-balancing-policies](https://github.com/THellemans/thesis))
+   - [Thesis, Analysis of Large Scale Randomized Load Balancing Policies](#[thesis,-analysis-of-large-scale-randomized-load-balancing-policies])
   - [Layman summary](#layman-summary)
   - [List of publications](#list-of-publications)
- - [Discrete Optimization: Capacitated Vehicle Routing Problem](#[discrete-optimization:-capacitated-vehicle-routing-problem](https://github.com/THellemans/vehicle_routing_problem))
+ - [Discrete Optimization: Capacitated Vehicle Routing Problem](#discrete-optimization:-capacitated-vehicle-routing-problem)
   - [Motivation](#motivation)
   - [Formulation of the problem](#formulation-of-the-problem)
   - [Why Adaptive Large Neighborhood Search?](#why-adaptive-large-neighborhood-search?)
@@ -47,7 +47,7 @@ In particular I have been accepted (as first author) for the [**Sigmetrics Confe
 
 # Open source projects
 
-## [Thesis, Analysis of Large Scale Randomized Load Balancing Policies](https://github.com/THellemans/thesis)
+## Thesis, Analysis of Large Scale Randomized Load Balancing Policies
 
 In addition to the text and code which I shared at my [github repository](https://github.com/THellemans/thesis) I also made videos which give a general overview of each chapter in my thesis, these videos can be found at my [youtube playlist](https://www.youtube.com/playlist?list=PLRcKwIHscs19xypNk9B7uMimChab8_iWE).
 
@@ -92,7 +92,9 @@ At each arrival instant, the car considers 2 queues and decides which queue it w
  - Wouter Minnebo, Tim Hellemans and Benny Van HoudtOn a Class of Push and Pull Strategies with Single Migrations and Limited Probe Rate Performance Evaluation, Vol. 113, pp. 42-67, 2017.
  - Ben Berckmoes, Tim Hellemans, Mark Sioen, & Jan Van Casteren An application of approach theory to the relative Hausdorff measure of non-compactness for the Wasserstein metric. Journal of Mathematical Analysis and Applications (2017), 449(2), 1770-1789.
 
-## [Discrete Optimization: Capacitated Vehicle Routing Problem](https://github.com/THellemans/vehicle_routing_problem)
+## Discrete Optimization: Capacitated Vehicle Routing Problem
+
+The code assiciated to this project may be found at [this github repository]((https://github.com/THellemans/vehicle_routing_problem)).
 
 ### Motivation
 
