@@ -2,9 +2,10 @@
 
   <img align="left" img src="figures/profile_pic_cropped.png" alt="hi" class="inline" width="200" height="auto" style="border-radius:50%">
 
- I am currently wrapping up my **Phd** in **computer science** at the University of Antwerp which I started after graduating **summa cum laude** in mathematics. I have been using **mean field methods** to analyze **load balancing policies** in systems with many servers. 
+I am currently wrapping up my **Phd** in **computer science** at the University of Antwerp which I started after graduating **summa cum laude** in mathematics. I am now on the lookout to start working as a **data scientist**. I have been using **mean field methods** to analyze **load balancing policies** in systems with many servers. 
 My Phd mainly required a lot of **probability theory** (in particular Markov chain theory), **calculus** and **programming**.
-During my Phd I have come into contact with quite a few **optimization** and **forecasting** problems. I am currently on the lookout to start working as a **data scientist**.
+During my Phd I have come into contact with quite a few **optimization** and **forecasting** problems.
+
 I published **9** independent papers **(7 as first author)**.
 In particular I have been accepted (as first author) for the [**Sigmetrics Conference**](https://en.wikipedia.org/wiki/SIGMETRICS#2020) three times, this is significant as it is the flagship conference for my area of research. From Wikipedia: 
 
