@@ -2,7 +2,7 @@
 
   <img align="left" img src="figures/profile_pic_cropped.png" alt="hi" class="inline" width="200" height="auto" style="border-radius:50%; shape-outside: content-box">
 
-I am currently working as a data science consultant at ORTEC Belgium where I use both machine learning and optimization methods in order to solve complex problems across different industries. In addition to working as a consultant I mentor junior colleagues on their projects, organize trainings and hackathons and create a bridge between academics and industry through guest lectures, master theses and conferences.
+I am currently working as a **data science consultant** at ORTEC Belgium where I use both **machine learning** and **optimization** methods in order to solve complex problems across different industries. In addition to working as a consultant I **mentor junior colleagues** on their projects, organize **trainings** and **hackathons** and create a **bridge** between **academics** and **industry** through guest lectures, master theses and conferences.
 
 Previously, I completed a **Phd** in **computer science** at the University of Antwerp which I started after graduating **summa cum laude** in mathematics. During my Phd, I have been using **mean field methods** to analyze **load balancing policies** in systems with many servers. 
 My Phd mainly required a lot of **probability theory** (in particular Markov chain theory), **calculus** and **programming**.
